@@ -1,4 +1,4 @@
-# ESC_PWM_RP2350
+# ESCDriver
 
 [![Platform: RP2350](https://img.shields.io/badge/Platform-RP2350%20%2F%20Pico%202-blue.svg)](https://www.raspberrypi.com/products/raspberry-pi-pico-2/)
 [![Framework: Arduino-Pico](https://img.shields.io/badge/Framework-arduino--pico-green.svg)](https://github.com/earlephilhower/arduino-pico)
@@ -8,7 +8,7 @@
 
 A high-performance, glitch-free hardware PWM Electronic Speed Controller (ESC) driver for the **Raspberry Pi RP2350** (Raspberry Pi Pico 2 and RP2350 derivatives) using the [`arduino-pico`](https://github.com/earlephilhower/arduino-pico) core.
 
-Unlike software PWM or timer-interrupt-driven libraries that suffer from CPU overhead, jitter, and interrupt latency, **ESC_PWM_RP2350** drives ESC outputs directly via the RP2350's dedicated hardware PWM slices. Waveforms are generated purely in silicon with sub-nanosecond precision, zero CPU load, and guaranteed phase alignment.
+Unlike software PWM or timer-interrupt-driven libraries that suffer from CPU overhead, jitter, and interrupt latency, **ESCDriver** drives ESC outputs directly via the RP2350's dedicated hardware PWM slices. Waveforms are generated purely in silicon with sub-nanosecond precision, zero CPU load, and guaranteed phase alignment.
 
 ---
 
@@ -109,11 +109,11 @@ YourSketch/
 ### Option 2: Install as Arduino Library
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/<your-username>/ESC_PWM_RP2350.git
+   git clone https://github.com/jessmathews/ESCDriver.git
    ```
 2. Place the folder into your Arduino libraries directory:
-   - **Windows**: `Documents/Arduino/libraries/ESC_PWM_RP2350`
-   - **macOS / Linux**: `~/Arduino/libraries/ESC_PWM_RP2350`
+   - **Windows**: `Documents/Arduino/libraries/ESCDriver`
+   - **macOS / Linux**: `~/Arduino/libraries/ESCDriver`
 3. Restart the Arduino IDE.
 
 ---
@@ -159,10 +159,10 @@ void loop() {
 
 ## Bench Test Example
 
-A complete interactive bench test sketch is provided in [`examples/BenchTest/BenchTest.ino`](file:///c:/Users/jessm/Downloads/ESC_PWM_RP2350/examples/BenchTest/BenchTest.ino).
+A complete interactive bench test sketch is provided in [`examples/BenchTest/BenchTest.ino`].
 
 When installed as an Arduino library, you can open it directly from the Arduino IDE menu:
-**File → Examples → ESC_PWM_RP2350 → BenchTest**
+**File → Examples → ESCDriver → BenchTest**
 
 > [!CAUTION]
 > **SAFETY FIRST: ALWAYS REMOVE ALL PROPELLERS BEFORE BENCH TESTING!**
@@ -186,15 +186,13 @@ Open the Arduino Serial Monitor (with newline enabled at 115200 baud) to control
 ## Repository Layout
 
 ```
-ESC_PWM_RP2350/
+ESCDriver/
 ├── examples/
 │   └── BenchTest/
 │       └── BenchTest.ino       # Interactive multi-motor bench testing utility
 ├── ESCDriver.h                 # Driver API definitions & protocol enums
 ├── ESCDriver.cpp               # RP2350 hardware PWM configuration & pulse generation
-├── ESC_PWM_RP2350.ino          # Standalone sketch for direct IDE workspace testing
 ├── library.properties          # Arduino IDE Library 1.5 specification manifest
-├── LICENSE                     # MIT License
 └── README.md                   # Complete documentation
 ```
 
