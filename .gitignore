@@ -1,0 +1,23 @@
+# Build output and temporary files
+build/
+bin/
+*.elf
+*.bin
+*.hex
+*.uf2
+*.o
+*.a
+
+# Arduino / PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
