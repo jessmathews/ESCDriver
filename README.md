@@ -193,6 +193,7 @@ ESCDriver/
 ├── ESCDriver.h                 # Driver API definitions & protocol enums
 ├── ESCDriver.cpp               # RP2350 hardware PWM configuration & pulse generation
 ├── library.properties          # Arduino IDE Library 1.5 specification manifest
+├── LICENSE                     # MIT License
 └── README.md                   # Complete documentation
 ```
 
